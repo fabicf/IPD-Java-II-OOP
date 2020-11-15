@@ -53,9 +53,7 @@ class Person {
 		} 	
 		
 		return firstName + " " + lastName;
-	}
-	
-		
+	}	
 }
 
 
@@ -97,6 +95,62 @@ class SimpleCalculator{
 	}
 }
 
+//Wall Area
+class Wall{
+	double width;
+	double height;
+	
+	public Wall() {
+		
+	}
+	
+	public Wall(double consWidth, double consHeight) {
+		height = consHeight;
+		
+		if (consWidth < 0) {
+			width = 0;
+		} else {
+			width = consWidth;
+		}
+		
+		if (consHeight < 0) {
+			height = 0;
+		} else {
+			height = consHeight;
+		}	
+	}
+	
+	public double getWith() {
+		return width;
+	}
+	
+	public double getHeight() {
+		return height;
+	}
+	
+	public void setWidth(double widthValue) {
+		if (widthValue < 0) {
+			width = 0;
+		}else {
+		width = widthValue;
+		}
+	}
+	
+	public void setHeight(double heightValue) {
+		if (heightValue < 0) {
+			height = 0;
+		} else{
+			height = heightValue;
+		}	
+	}
+	
+	public double getArea() {
+		return width * height;
+	}
+}
+
+
+
 
 
 public class Assign1 {
@@ -131,6 +185,20 @@ public class Assign1 {
 		calculator.setFirstNumber(0);
 		System.out.println("multiply = " + calculator.getMultiplicationResult());
 		System.out.println("divide = " + calculator.getDivisionResult());
+		
+		//skip line
+		System.out.println();
+		
+		//Wall 
+		Wall wall = new Wall (5, 4);
+		System.out.println("area = " + wall.getArea());
+		
+		wall.setHeight(-1.5);
+		System.out.println("width = " + wall.getWith());
+		System.out.println("height = " + wall.getHeight());
+		System.out.println("area = " + wall.getArea());
+		
+		
 		
 	}
 
