@@ -1,9 +1,10 @@
 package assign1_test1;
 
+//Person
 class Person {
-	String firstName;
-	String lastName;
-	int age;
+	private String firstName;
+	private String lastName;
+	private int age;
 	
 	public String getFirstName() {
 		return firstName;
@@ -58,11 +59,52 @@ class Person {
 }
 
 
+//Sum Calculator
+class SimpleCalculator{
+	double firstNumber;
+	double secondNumber;
+	
+	public double getFirstNumber () {
+		return firstNumber;
+	}
+	
+	public double getSecondNumber() {
+		return secondNumber;
+	}
+	
+	public void setFirstNumber(double firstValue) {
+		firstNumber = firstValue;
+	}
+	
+	public void setSecondNumber(double secondValue) {
+		secondNumber = secondValue;
+	}
+	
+	public double getAdditionResult() {
+		return firstNumber + secondNumber;
+	}
+	
+	public double getSubstractionResult() {
+		return firstNumber - secondNumber;
+	}
+	
+	public double getMultiplicationResult() {
+		return firstNumber * secondNumber;
+	}
+	
+	public double getDivisionResult() {
+		return firstNumber / secondNumber;
+	}
+}
+
+
 
 public class Assign1 {
 	
 
 	public static void main(String[] args) {
+		
+		//Person
 		Person fabi = new Person();
 		fabi.setFirstName("");
 		fabi.setLastName("");
@@ -76,7 +118,20 @@ public class Assign1 {
 		fabi.setLastName("Smith");
 		System.out.println("fullName = " + fabi.getFullName());
 		
-
+		//skip line
+		System.out.println();
+				
+		//Sum Calculator
+		SimpleCalculator calculator = new SimpleCalculator();
+		calculator.setFirstNumber(5.0);
+		calculator.setSecondNumber(4);
+		System.out.println("add = " + calculator.getAdditionResult());
+		System.out.println("subtract = " + calculator.getSubstractionResult());
+		calculator.setFirstNumber(5.25);
+		calculator.setFirstNumber(0);
+		System.out.println("multiply = " + calculator.getMultiplicationResult());
+		System.out.println("divide = " + calculator.getDivisionResult());
+		
 	}
 
 }
